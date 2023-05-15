@@ -1,27 +1,27 @@
-# VMIPS-Functional-Timing-Simulator
-The repo presents the VMIPS architecture, a high-performance processor architecture for embedded systems, and the development of both a functional simulator and a timing simulator to aid in the development and testing of assembly code for this architecture. The functional simulator allows for the testing and evaluation of a virtual implementation of the MIPS instruction set without the need for actual hardware, while the timing simulator provides a realistic simulation of the performance of the VMIPS architecture. The article also provides a detailed description of the methodology used in the timing simulator, including the fetch and decode block, dispatch queue, computational pipeline, and vector load store unit. By using the simulators, developers can identify and resolve issues in assembly code prior to actual hardware implementation, improving the efficiency and reliability of the development process.
+# SRAM 256x4b BIST
+Built-In Self Test (BIST) is a method used in digital circuit and system design and testing to guarantee
+proper operation and reliability. BIST allows self-testing and fault detection during operation without
+requiring external testing equipment, which can decrease testing costs and enhance product quality. BIST
+comprises embedded specialized hardware within the circuit to carry out self-tests. BIST circuits usually
+have a test pattern generator, signature analyzer, and fault detector. The test pattern generator creates
+test vectors that are used as inputs to the circuit, and the signature analyzer compares the circuit output
+to anticipated results to detect faults. The fault detector identifies the type and location of any faults
+detected by the BIST circuit. One of the main advantages of BIST is its ability to rapidly diagnose faults
+and identify their location, which can save time and effort in repairing the circuit. Moreover, BIST can
+be made to work during normal circuit operation, providing real-time monitoring and error detection
+that can enhance system reliability. BIST is widely used in a variety of digital systems, including
+processors, memory devices, and communication circuits. It is especially useful for complex systems that
+are challenging to test using external equipment due to their size or integration level. In summary, BIST
+is a valuable testing method for digital circuits and systems that offers an efficient and cost-effective
+approach to ensuring proper operation and reliability. Its use of specialized embedded hardware and
+fault detection capabilities can improve system quality, reduce testing costs, and save time in identifying
+and repairing faults.
 
-![alt text](Results/VMIPS_Architecture.png)
+## Implmented Architecure
+This section discusses the components of an MBIST (Memory Built-In Self-Test) system, which is used to
+test the functionality of memory cells. The four main components of an MBIST system are the decoder,
+comparator, controller, and counter. 
 
-### To run functional simulator use,
-```
-FunctionalSimulator/main.py --iodir InputOutputDirectory
-```
-
-
-### To run timing simulator use,
-```
-TimingSimulator/main.py --iodir InputOutputDirectory
-```
-
-#### Note: To run the Timing simulator, the Functional Simulator outputs resolvedData.txt, which needs to be placed in the input output directory of the timing simulator and renamed to Data.txt.
-
-## Performace trends observed using the simulator.
-### For dot product of two vectors with length 450  
-<img src="TimingSimulator/IODir1/Plots/dotPdt.png" width="500">
-
-<h3>For a single FC layer</h3>
-<img src="TimingSimulator/IODir1/Plots/fcLayer.png" width="500">
-
+![alt text](Results/BIST_SRAM_Architecture.png)
 
 
