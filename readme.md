@@ -18,9 +18,7 @@ fault detection capabilities can improve system quality, reduce testing costs, a
 and repairing faults.
 
 ## Implmented Architecure
-This section discusses the components of an MBIST (Memory Built-In Self-Test) system, which is used to
-test the functionality of memory cells. The four main components of an MBIST system are the decoder,
-comparator, controller, and counter. 
+The four main components of an MBIST system are the decoder, comparator, controller, and counter. 
 
 ![alt text](Results/BIST_SRAM_Architecture.png)
 
