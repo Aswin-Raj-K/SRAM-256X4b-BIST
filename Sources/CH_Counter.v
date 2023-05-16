@@ -17,7 +17,7 @@ always @(posedge clk) begin
         counter <= counter;
 end
 
-assign counter_out = {counter[`SRAM_ADDR_WIDTH+1]?~counter[0]:counter[0], ~counter[`SRAM_ADDR_WIDTH], counter[`SRAM_ADDR_WIDTH-1:0]};
+assign counter_out = {counter[`SRAM_ADDR_WIDTH+1]^counter[0], ~counter[`SRAM_ADDR_WIDTH], counter[`SRAM_ADDR_WIDTH-1:0]};
 
 assign cout = counter[`CH_COUNTER_WIDTH-1];
 
