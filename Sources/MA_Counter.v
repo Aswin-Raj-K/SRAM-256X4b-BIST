@@ -4,7 +4,7 @@
 module MA_Counter
 #(parameter PATTERN_WIDTH = $clog2(`MA_TEST_PATTERN_COUNT))(input clk, cen, rst,
 output [`SRAM_ADDR_WIDTH + PATTERN_WIDTH : 0] counter_out,
-output reg cout = 0);
+output reg cout);
 
 reg [`SRAM_ADDR_WIDTH + 2 :0]addr;
 reg [PATTERN_WIDTH-1:0]decode;
@@ -23,6 +23,7 @@ always @(posedge clk) begin
         addr <= 0;
         decode <= 0;
         pass <= 0;
+	cout <=0;
     end
     else if (cen)
     begin
